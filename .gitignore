@@ -1,0 +1,13 @@
+.DS_Store
+.idea/
+.vscode/
+
+.sass-cache/
+
+node_modules/
+typings/
+
+/client/**/*.js
+/client/**/*.js.map
+
+npm-debug.log
