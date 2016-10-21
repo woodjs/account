@@ -1,3 +1,119 @@
-body{
+@import "core/reset";
+@import "core/base";
+@import "core/config";
 
+html {
+ font-size: 62.5%;
+}
+
+body {
+ font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ color: $fontColor;
+ background: $frameBgColor;
+ font-size:14px;
+ min-height: 100%;
+ @include boxSizing(border-box);
+}
+
+body * {
+ @include boxSizing(inherit);
+}
+
+.frame-sidebar{
+ width: 240px;
+ position:fixed;
+ left:0;
+ top:0;
+ height:100%;
+ z-index: 100;
+ background: $sidebarHeaderBgColor;
+ overflow: hidden;
+ color:#fff;
+ .sidebar-header{
+  padding:10px;
+  text-align: center;
+  height:60px;
+  line-height: 40px;
+  .logo{
+   color:#eee;
+   font-size:22px;
+  }
+ }
+ .sidebar-content{
+  width: 260px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: $sidebarContentBgColor;
+  ul{
+   width: 240px;
+  }
+  li{
+   margin:5px 0;
+   border-top:1px solid transparent;
+   border-bottom:1px solid transparent;
+   a{
+    display: block;
+    padding: 5px 40px 5px 53px;
+    font-size:13px;
+    line-height: 22px;
+    border:1px solid transparent;
+    position: relative;
+    &:hover{
+     border-top-color: $sidebarItemHoverColor;
+     border-bottom-color: $sidebarItemHoverColor;
+     @include boxShadow(0 0 3px $sidebarItemHoverColor);
+    }
+    i{
+     position: absolute;
+     left: 25px;
+     top:50%;
+     margin-top:-9px;
+     width:18px;
+     height:18px;
+     font-size:18px;
+    }
+    .sidebar-arrow{
+     position: absolute;
+     right:15px;
+     top:50%;
+     font-size:16px;
+     width:16px;
+     height:16px;
+     margin-top:-8px;
+     text-align: center;
+    }
+   }
+  }
+  .active > a{
+   @include boxShadow(3px 0 0 #435D78 inset);
+  }
+  .nav-item-children{
+   padding:10px 0;
+   background: $sidebarChildItemColor;
+   a{
+    padding-left:73px;
+   }
+   i{
+    left:45px;
+   }
+  }
+ }
+ .sidebar-footer{
+  padding:10px 20px;
+  height:40px;
+  border-top:1px solid transparent;
+  background: $sidebarFooterBgColor;
+ }
+}
+
+.frame-main{
+ padding-left:240px;
+}
+.frame-header{
+ position: fixed;
+ z-index:100;
+ padding-right:10px;
+ height: 60px;
+ width:100%;
+ background: $frameHeaderBgColor;
 }

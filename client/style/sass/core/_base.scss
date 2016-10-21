@@ -38,7 +38,7 @@
 @mixin transform($prop...) {
  -webkit-transform: $prop;
  -moz-transform: $prop;
- -ms-transform: $prop; // ie9
+ -ms-transform: $prop; // ie9+
  transform: $prop;
 }
 
