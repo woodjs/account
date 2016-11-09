@@ -1,0 +1,8 @@
+<div>
+  <div><label>用户名：</label><input type="text" #usernameRef [class.error]="usernameInvalid"  [(ngModel)]="username" (keyup.tab)="login()" (keyup.enter)="login()" placeholder="请输入用户名" /></div>
+  <div><label>密码：</label><input type="text" #passwordRef [class.error]="passwordInvalid" [(ngModel)]="password" (keyup.tab)="login()" (keyup.enter)="login();" placeholder="请输入密码" /></div>
+  <div><span *ngIf="usernameInvalid || passwordInvalid">{{error}}</span></div>
+  <div>
+    <button (click)="login()" type="submit">登录</button>
+  </div>
+</div>
