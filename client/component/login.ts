@@ -1,8 +1,14 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 
+import {LoginParamsSchema} from '../schema/login';
+import {LoginService} from '../service/login';
+
 @Component({
   moduleId: module.id,
   selector: 'login',
+  providers: [
+    LoginService
+  ],
   templateUrl: '../template/login.html',
   styles: [
     `
@@ -25,7 +31,9 @@ export class Login implements OnInit{
   private usernameInvalid: boolean = false;
   private passwordInvalid: boolean = false;
 
-  constructor() {
+  constructor(
+    private loginService: LoginService
+  ) {
   }
 
   ngOnInit() {
@@ -35,15 +43,19 @@ export class Login implements OnInit{
     let isValid = this.checkValid();
 
     if (isValid) {
-      console.log('ok');
+      var params = this.getParams();
+
+      this.loginService.login(params)
+        .then(users => console.log(users));
     }
   }
 
-  getParams(): Object {
+  getParams(): LoginParamsSchema {
+
     return {
       username: this.username,
       password: this.password
-    }
+    };
   }
 
   checkValid(): boolean {
