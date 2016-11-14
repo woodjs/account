@@ -1,11 +1,11 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
+import {Router} from '@angular/router';
 
-import {LoginParamsSchema} from '../schema/login';
+import {LoginSchema} from '../schema/login';
 import {LoginService} from '../service/login';
 
 @Component({
   moduleId: module.id,
-  selector: 'login',
   providers: [
     LoginService
   ],
@@ -17,7 +17,7 @@ import {LoginService} from '../service/login';
     `
   ]
 })
-export class Login implements OnInit{
+export class LoginComponent implements OnInit{
 
   @ViewChild('usernameRef')
   usernameRef;
@@ -32,7 +32,8 @@ export class Login implements OnInit{
   private passwordInvalid: boolean = false;
 
   constructor(
-    private loginService: LoginService
+    private loginService: LoginService,
+    private router: Router
   ) {
   }
 
@@ -46,11 +47,14 @@ export class Login implements OnInit{
       var params = this.getParams();
 
       this.loginService.login(params)
-        .then(users => console.log(users));
+        .then(users => {
+          console.log(users);
+          this.router.navigate(['index']);
+        });
     }
   }
 
-  getParams(): LoginParamsSchema {
+  getParams(): LoginSchema {
 
     return {
       username: this.username,

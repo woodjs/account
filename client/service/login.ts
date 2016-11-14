@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Http, Headers} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
-import {LoginParamsSchema} from '../schema/login';
+import {LoginSchema} from '../schema/login';
 
 @Injectable()
 export class LoginService {
@@ -17,7 +17,7 @@ export class LoginService {
   ) {
   }
 
-  login(params: LoginParamsSchema): Promise<any> {
+  login(params: LoginSchema): Promise<any> {
 
     return this.http
       .post(this.loginUrl, JSON.stringify(params), {

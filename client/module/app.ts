@@ -4,7 +4,14 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
 
-import {Login} from '../component/login';
+import '../config/rxjs-extension';
+
+import {appRoute} from '../route/app';
+
+import {AppComponent} from '../component/app';
+import {LoginComponent} from '../component/login';
+import {IndexComponent} from '../component/index';
+
 import {LoginMock} from '../mock/login';
 
 @NgModule({
@@ -12,14 +19,17 @@ import {LoginMock} from '../mock/login';
     BrowserModule,
     FormsModule,
     HttpModule,
+    appRoute,
     InMemoryWebApiModule.forRoot(LoginMock)
   ],
   declarations: [
-    Login
+    AppComponent,
+    LoginComponent,
+    IndexComponent
   ],
   bootstrap: [
-    Login
+    AppComponent
   ]
 })
-export class App {
+export class AppModule {
 }
