@@ -1,2 +1,2 @@
-# account
-angular2.js
+# abj-admin
+angular2 bootstrap3 jquery2
