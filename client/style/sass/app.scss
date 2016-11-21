@@ -2,7 +2,7 @@
  * Load Main Bootstrap LESS files
  */
 
-@import '../vendor/s-sass/bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
 
 /*
  * Variable and Mixin
@@ -19,10 +19,10 @@
 /*
  * Vendors
  */
-@import '../vendor/s-sass/bower_components/weather-icons/sass/weather-icons';
-@import '../vendor/s-sass/bower_components/bootstrap-fileinput/sass/fileinput';
-@import '../vendor/s-sass/bower_components/material-shadows/material-shadows';
-@import '../vendor/s-sass/bower_components/Waves/src/scss/waves';
+@import '../../../bower_components/weather-icons/sass/weather-icons';
+@import '../../../bower_components/bootstrap-fileinput/sass/fileinput';
+@import '../../../bower_components/material-shadows/material-shadows';
+@import '../../../bower_components/Waves/src/scss/waves';
 
 /* 
  * Load Website related LESS files 
@@ -75,19 +75,19 @@
 /*
  * Vendor Overrides
  */
-@import 'i../vendor/-overrides/mediaelement';
-@import 'i../vendor/-overrides/fullcalendar';
-@import 'i../vendor/-overrides/bootgrid';
-@import 'i../vendor/-overrides/bootstrap-select';
-@import 'i../vendor/-overrides/chosen';
-@import 'i../vendor/-overrides/noUiSlider';
-@import 'i../vendor/-overrides/farbtastic';
-@import 'i../vendor/-overrides/summernote';
-@import 'i../vendor/-overrides/bootstrap-datetimepicker';
-@import 'i../vendor/-overrides/fileinput';
-@import 'i../vendor/-overrides/light-gallery';
-@import 'i../vendor/-overrides/waves';
-@import 'i../vendor/-overrides/sweetalert';
-@import 'i../vendor/-overrides/typeahead';
-@import 'i../vendor/-overrides/malihu-custom-scrollbar';
+@import './inc/vendor-override/mediaelement';
+@import './inc/vendor-override/fullcalendar';
+@import './inc/vendor-override/bootgrid';
+@import './inc/vendor-override/bootstrap-select';
+@import './inc/vendor-override/chosen';
+@import './inc/vendor-override/noUiSlider';
+@import './inc/vendor-override/farbtastic';
+@import './inc/vendor-override/summernote';
+@import './inc/vendor-override/bootstrap-datetimepicker';
+@import './inc/vendor-override/fileinput';
+@import './inc/vendor-override/light-gallery';
+@import './inc/vendor-override/waves';
+@import './inc/vendor-override/sweetalert';
+@import './inc/vendor-override/typeahead';
+@import './inc/vendor-override/malihu-custom-scrollbar';
 
