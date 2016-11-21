@@ -1,0 +1,695 @@
+.dash-widget-item {
+ position: relative;
+ min-height: 380px;
+ margin-bottom: 30px;
+ box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+
+ .dash-widget-header {
+  position: relative;
+
+  .actions {
+   display: none;
+   position: absolute;
+   right: 4px;
+   top: 6px;
+  }
+ }
+
+ .dash-widget-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+ }
+
+ .dash-widget-title {
+  padding: 12px 20px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  font-weight: 300;
+ }
+
+ &:hover {
+  .dash-widget-header .actions {
+   display: block;
+  }
+ }
+}
+
+/*
+ * Site Visits
+ */
+#site-visits {
+ color: rgba(255, 255, 255, 0.9);
+
+ .dash-widget-header {
+  padding-bottom: 38px;
+  background-color: rgba(0, 0, 0, 0.13);
+ }
+
+ .dash-widget-title {
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+ }
+
+ h3 {
+  color: rgba(255, 255, 255, 0.9);
+ }
+}
+
+/*
+ * Best Selling Item
+ */
+#best-selling {
+ background-color: #fff;
+
+ .dash-widget-header {
+  & > img {
+   width: 100%;
+   height: 155px;
+  }
+
+  .dash-widget-title {
+   padding-bottom: 30px;
+   top: 0;
+   color: #fff;
+   #gradient > {
+    @include vertical(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+   };
+  }
+
+  .main-item {
+   padding: 15px;
+   color: #fff;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   #gradient > {
+    @include vertical(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+   }
+
+   & > h2 {
+    font-weight: 400;
+    font-size: 20px;
+    margin: 5px 0 0 0;
+    line-height: 100%;
+    color: #fff;
+   }
+  }
+ }
+}
+
+/*
+ * Weather
+ */
+#weather-widget {
+ color: #fff;
+ padding: 20px 20px 0;
+
+ .weather-status {
+  font-size: 40px;
+  line-height: 100%;
+ }
+
+ .weather-icon {
+  text-align: center;
+  margin-top: 10px;
+  height: 150px;
+  @include bg-option();
+
+  /* Weather Icons */
+  @mixin wi-item($icon) {
+   @include img-retina('../img/icons/weather/#{$icon}.png', '../img/icons/weather/#{$icon}@2x.png', 125 px, 125 px);
+  }
+
+  &.wi-0 {
+   @include wi-item(0);
+  }
+  &.wi-1 {
+   @include wi-item(1);
+  }
+  &.wi-2 {
+   @include wi-item(2);
+  }
+  &.wi-3 {
+   @include wi-item(3);
+  }
+  &.wi-4 {
+   @include wi-item(2);
+  }
+  &.wi-5 {
+   @include wi-item(5);
+  }
+  &.wi-6 {
+   @include wi-item(5);
+  }
+  &.wi-7 {
+   @include wi-item(5);
+  }
+  &.wi-8 {
+   @include wi-item(5);
+  }
+  &.wi-9 {
+   @include wi-item(9);
+  }
+  &.wi-10 {
+   @include wi-item(5);
+  }
+  &.wi-11 {
+   @include wi-item(9);
+  }
+  &.wi-12 {
+   @include wi-item(9);
+  }
+  &.wi-13 {
+   @include wi-item(9);
+  }
+  &.wi-14 {
+   @include wi-item(9);
+  }
+  &.wi-15 {
+   @include wi-item(5);
+  }
+  &.wi-16 {
+   @include wi-item(9);
+  }
+  &.wi-17 {
+   @include wi-item(5);
+  }
+  &.wi-18 {
+   @include wi-item(18);
+  }
+  &.wi-19 {
+   @include wi-item(19);
+  }
+  &.wi-20 {
+   @include wi-item(19);
+  }
+  &.wi-21 {
+   @include wi-item(19);
+  }
+  &.wi-22 {
+   @include wi-item(19);
+  }
+  &.wi-23 {
+   @include wi-item(19);
+  }
+  &.wi-24 {
+   @include wi-item(24);
+  }
+  &.wi-25 {
+   @include wi-item(24);
+  }
+  &.wi-26 {
+   @include wi-item(26);
+  }
+  &.wi-27 {
+   @include wi-item(27);
+  }
+  &.wi-28 {
+   @include wi-item(28);
+  }
+  &.wi-29 {
+   @include wi-item(27);
+  }
+  &.wi-30 {
+   @include wi-item(28);
+  }
+  &.wi-31 {
+   @include wi-item(31);
+  }
+  &.wi-32 {
+   @include wi-item(32);
+  }
+  &.wi-33 {
+   @include wi-item(31);
+  }
+  &.wi-34 {
+   @include wi-item(32);
+  }
+  &.wi-35 {
+   @include wi-item(5);
+  }
+  &.wi-36 {
+   @include wi-item(32);
+  }
+  &.wi-37 {
+   @include wi-item(2);
+  }
+  &.wi-38 {
+   @include wi-item(2);
+  }
+  &.wi-39 {
+   @include wi-item(2);
+  }
+  &.wi-40 {
+   @include wi-item(5);
+  }
+  &.wi-41 {
+   @include wi-item(5);
+  }
+  &.wi-42 {
+   @include wi-item(9);
+  }
+  &.wi-43 {
+   @include wi-item(5);
+  }
+  &.wi-44 {
+   @include wi-item(27);
+  }
+  &.wi-45 {
+   @include wi-item(2);
+  }
+  &.wi-46 {
+   @include wi-item(18);
+  }
+  &.wi-47 {
+   @include wi-item(2);
+  }
+ }
+
+ .weather-info {
+  list-style: none;
+  padding: 0;
+  margin: 3px 0 0 0;
+
+  & > li {
+   display: inline-block;
+   border: 1px solid rgba(255, 255, 255, 0.39);
+   padding: 2px 10px 3px;
+   margin-right: 5px;
+  }
+ }
+
+ .weather-list {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 5px 12px;
+  font-size: 16px;
+  height: 51px;
+  @include text-overflow();
+
+  & > span {
+   margin-right: 7px;
+   font-weight: 300;
+   display: inline-block;
+   line-height: 40px;
+   vertical-align: top;
+
+   @mixin wli-icon($icon) {
+    background-image: url('../img/icons/weather/#{$icon}.png');
+   }
+
+   &.weather-list-icon {
+    width: 35px;
+    height: 35px;
+    @include bg-option();
+    background-size: 30px 30px;
+
+    &.wi-0 {
+     @include wli-icon(0);
+    }
+    &.wi-1 {
+     @include wli-icon(1);
+    }
+    &.wi-2 {
+     @include wli-icon(2);
+    }
+    &.wi-3 {
+     @include wli-icon(3);
+    }
+    &.wi-4 {
+     @include wli-icon(2);
+    }
+    &.wi-5 {
+     @include wli-icon(5);
+    }
+    &.wi-6 {
+     @include wli-icon(5);
+    }
+    &.wi-7 {
+     @include wli-icon(5);
+    }
+    &.wi-8 {
+     @include wli-icon(5);
+    }
+    &.wi-9 {
+     @include wli-icon(9);
+    }
+    &.wi-10 {
+     @include wli-icon(5);
+    }
+    &.wi-11 {
+     @include wli-icon(9);
+    }
+    &.wi-12 {
+     @include wli-icon(9);
+    }
+    &.wi-13 {
+     @include wli-icon(9);
+    }
+    &.wi-14 {
+     @include wli-icon(9);
+    }
+    &.wi-15 {
+     @include wli-icon(5);
+    }
+    &.wi-16 {
+     @include wli-icon(9);
+    }
+    &.wi-17 {
+     @include wli-icon(5);
+    }
+    &.wi-18 {
+     @include wli-icon(18);
+    }
+    &.wi-19 {
+     @include wli-icon(19);
+    }
+    &.wi-20 {
+     @include wli-icon(19);
+    }
+    &.wi-21 {
+     @include wli-icon(19);
+    }
+    &.wi-22 {
+     @include wli-icon(19);
+    }
+    &.wi-23 {
+     @include wli-icon(19);
+    }
+    &.wi-24 {
+     @include wli-icon(24);
+    }
+    &.wi-25 {
+     @include wli-icon(24);
+    }
+    &.wi-26 {
+     @include wli-icon(26);
+    }
+    &.wi-27 {
+     @include wli-icon(27);
+    }
+    &.wi-28 {
+     @include wli-icon(28);
+    }
+    &.wi-29 {
+     @include wli-icon(27);
+    }
+    &.wi-30 {
+     @include wli-icon(28);
+    }
+    &.wi-31 {
+     @include wli-icon(31);
+    }
+    &.wi-32 {
+     @include wli-icon(32);
+    }
+    &.wi-33 {
+     @include wli-icon(31);
+    }
+    &.wi-34 {
+     @include wli-icon(32);
+    }
+    &.wi-35 {
+     @include wli-icon(5);
+    }
+    &.wi-36 {
+     @include wli-icon(32);
+    }
+    &.wi-37 {
+     @include wli-icon(2);
+    }
+    &.wi-38 {
+     @include wli-icon(2);
+    }
+    &.wi-39 {
+     @include wli-icon(2);
+    }
+    &.wi-40 {
+     @include wli-icon(5);
+    }
+    &.wi-41 {
+     @include wli-icon(5);
+    }
+    &.wi-42 {
+     @include wli-icon(9);
+    }
+    &.wi-43 {
+     @include wli-icon(5);
+    }
+    &.wi-44 {
+     @include wli-icon(27);
+    }
+    &.wi-45 {
+     @include wli-icon(2);
+    }
+    &.wi-46 {
+     @include wli-icon(18);
+    }
+    &.wi-47 {
+     @include wli-icon(2);
+    }
+   }
+
+   & > i {
+    line-height: 100%;
+    font-size: 39px;
+   }
+  }
+ }
+}
+
+/*
+ * Pie Charts
+ */
+#pie-charts {
+ background: #fff;
+
+ .dash-widget-header {
+  color: rgba(255, 255, 255, 0.9);
+ }
+
+}
+
+/*
+ * Blog Post
+ */
+
+.blog-post {
+ .bp-header {
+  position: relative;
+
+  & > img {
+   width: 100%;
+  }
+
+  .bp-title {
+   background: $m-indigo;
+   width: 100%;
+   padding: 20px;
+   color: #FFF;
+   display: block;
+
+   & > h2 {
+    color: #FFF;
+    font-weight: 400;
+    margin: 0 0 2px;
+    line-height: 100%;
+    font-size: 21px;
+   }
+  }
+ }
+}
+
+/*
+ * Profile View
+ */
+.profile-view {
+ text-align: center;
+ .pv-header {
+  position: relative;
+  height: 145px;
+  width: 100%;
+  @include bg-cover('../img/headers/sm/4.png');
+
+  & > .pv-main {
+   border-radius: 50%;
+   width: 130px;
+   position: absolute;
+   height: 130px;
+   bottom: -50px;
+   left: 50%;
+   margin-left: -65px;
+   @include transition(all);
+   @include transition-duration(300ms);
+  }
+ }
+
+ .pv-body {
+  margin-top: 70px;
+  padding: 0 20px 20px;
+
+  & > h2 {
+   margin: 0;
+   line-height: 100%;
+   font-size: 20px;
+   font-weight: 400;
+  }
+
+  & > small {
+   display: block;
+   color: #8E8E8E;
+   margin: 10px 0 15px;
+  }
+
+  .pv-contact,
+  .pv-follow {
+   padding: 0;
+   list-style: none;
+
+   & > li {
+    display: inline-block;
+   }
+  }
+
+  .pv-follow {
+   margin: 20px -20px;
+   padding: 10px;
+   background-color: #F7F7F7;
+   border-top: 1px solid #EEE;
+   border-bottom: 1px solid #EEE;
+
+   & > li {
+    padding: 0 10px;
+   }
+  }
+
+  .pv-contact {
+   & > li {
+    margin: 0 5px;
+
+    & > .zmdi {
+     line-height: 100%;
+     vertical-align: text-bottom;
+     font-size: 22px;
+    }
+   }
+  }
+
+  .pv-follow-btn {
+   padding: 7px 20px;
+   background: $m-cyan;
+   color: #FFF;
+   border-radius: 3px;
+   text-transform: uppercase;
+   display: block;
+   @include transition(all);
+   @include transition-duration(300ms);
+
+   &:hover {
+    background: darken($m-cyan, 5%);
+   }
+  }
+ }
+
+ &:hover {
+  .pv-main {
+   @include scale(1.2);
+  }
+ }
+}
+
+/*
+ * Picture List
+ */
+.picture-list {
+ .pl-body {
+  padding: 2px;
+
+  [class*="col-"] {
+   padding: 2px;
+
+   & > a {
+    display: block;
+    @include hover-pop(rgba(0, 0, 0, 0.3));
+
+    img {
+     width: 100%;
+    }
+   }
+
+  }
+
+  @include clearfix();
+ }
+}
+
+/*
+ * Social
+ */
+.go-social {
+ .card-body {
+  padding: 0 15px 20px;
+
+  [class*="col-"] {
+   padding: 12px;
+
+   img {
+    @include transition(all);
+    @include transition-duration(200ms);
+    @include backface-visibility(hidden);
+   }
+
+   &:hover {
+    img {
+     @include scale(1.2);
+    }
+   }
+  }
+ }
+}
+
+/*
+ * Rating
+ */
+.rating-list {
+ padding: 0 0 10px;
+
+ .rl-star {
+  margin-top: 10px;
+  margin-bottom: 4px;
+
+  .zmdi {
+   font-size: 20px;
+
+   &:not(.active) {
+    color: #ccc;
+   }
+
+   &.active {
+    color: $m-orange;
+   }
+  }
+ }
+
+ .lv-item {
+  .media {
+   .zmdi-star {
+    line-height: 100%;
+    font-size: 22px;
+    color: #FF9800;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    left: 6px;
+   }
+
+   .media-body {
+    padding: 7px 10px 0 5px;
+   }
+  }
+ }
+}
