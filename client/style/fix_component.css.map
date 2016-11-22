@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACA,6CAA8C;EAC7C,YAAY,EAAE,CAAC",
-"sources": ["sass/fix_component.scss"],
-"names": [],
-"file": "fix_component.css"
-}
