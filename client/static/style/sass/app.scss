@@ -1,15 +1,15 @@
 /*
+ * Variable and Mixin
+ */
+
+@import 'inc/variables';
+@import 'inc/mixin';
+
+/*
  * Load Main Bootstrap sass files
  */
 
 @import '../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
-
-/*
- * Variable and Mixin
- */ 
-
-@import 'inc/variables';
-@import 'inc/mixin';
 
 /* 
  * Load Font

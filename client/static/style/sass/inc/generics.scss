@@ -2,82 +2,83 @@
  * Generate Margin Class
  * margin, margin-top, margin-bottom, margin-left, margin-right
  */
+@mixin margin($initial-size: 1, $max-size: 1, $step: 5) {
 
-@mixin margin($label, $size: 1, $key:1) {
- @if $size <= 30 {
-  .m-#{$key} {
-   margin: $size !important;
+ @for $i from $initial-size through $max-size {
+  @if $i != 0 and $i % $step == 0 and $i <= $max-size {
+   .m-#{$i} {
+    margin: $i + px !important;
+   }
+
+   .m-t-#{$i} {
+    margin-top: $i + px !important;
+   }
+
+   .m-b-#{$i} {
+    margin-bottom: $i + px !important;
+   }
+
+   .m-l-#{$i} {
+    margin-left: $i + px !important;
+   }
+
+   .m-r-#{$i} {
+    margin-right: $i + px !important;
+   }
   }
-
-  .m-t-#{$key} {
-   margin-top: $size !important;
-  }
-
-  .m-b-#{$key} {
-   margin-bottom: $size !important;
-  }
-
-  .m-l-#{$key} {
-   margin-left: $size !important;
-  }
-
-  .m-r-#{$key} {
-   margin-right: $size !important;
-  }
-
-  //@include margin($label - 5, $size + 5, $key + 5);
  }
 }
 
-@include margin(25, 0px, 0);
+@include margin(0, 30, 5);
 
 /*
  * Generate Padding Class
  * padding, padding-top, padding-bottom, padding-left, padding-right
  */
+@mixin padding($initial-size: 1, $max-size: 1, $step: 5) {
 
-@mixin padding($label, $size: 1, $key:1) {
- @if $size <= 30 {
-  .p-#{$key} {
-   padding: $size !important;
+ @for $i from $initial-size through $max-size {
+  @if $i != 0 and $i % $step == 0 and $i <= $max-size {
+   .p-#{$i} {
+    padding: $i + px !important;
+   }
+
+   .p-t-#{$i} {
+    padding-top: $i + px !important;
+   }
+
+   .p-b-#{$i} {
+    padding-bottom: $i + px !important;
+   }
+
+   .p-l-#{$i} {
+    padding-left: $i + px !important;
+   }
+
+   .p-r-#{$i} {
+    padding-right: $i + px !important;
+   }
   }
-
-  .p-t-#{$key} {
-   padding-top: $size !important;
-  }
-
-  .p-b-#{$key} {
-   padding-bottom: $size !important;
-  }
-
-  .p-l-#{$key} {
-   padding-left: $size !important;
-  }
-
-  .p-r-#{$key} {
-   padding-right: $size !important;
-  }
-
-  //@include padding($label - 5, $size + 5, $key + 5);
  }
 }
 
-@include padding(25, 0px, 0);
+@include padding(0, 30, 5);
 
 /*
  * Generate Font-Size Classes (8px - 20px)
  */
-@mixin font-size($label, $size: 8, $key:10) {
- @if $size <= 20 {
-  .f-#{$key} {
-   font-size: $size !important;
+@mixin font-size($initial-size: 1, $max-size: 1, $step: 5) {
+
+ @for $i from $initial-size through $max-size {
+  @if $i != 0 and $i % $step == 0 and $i <= $max-size {
+   .f-#{$i} {
+    font-size: $i + px !important;
+   }
   }
  }
-
- //@include font-size($label - 1, $size + 1, $key + 1);
 }
 
-@include font-size(20, 8px, 8);
+@include font-size(8, 20, 1);
 
 /*
  * Font Weight
