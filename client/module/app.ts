@@ -10,9 +10,10 @@ import {appRoute} from '../route/app';
 
 import {AppComponent} from '../component/app';
 import {LoginComponent} from '../component/login';
-import {IndexComponent} from '../component/index';
 
 import {LoginMock} from '../mock/login';
+import {RegisterComponent} from "../component/register";
+import {ForgetPasswordComponent} from "../component/forget-password";
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import {LoginMock} from '../mock/login';
   declarations: [
     AppComponent,
     LoginComponent,
-    IndexComponent
+    RegisterComponent,
+    ForgetPasswordComponent
   ],
   bootstrap: [
     AppComponent

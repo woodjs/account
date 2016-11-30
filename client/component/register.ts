@@ -3,21 +3,17 @@ import {Router} from '@angular/router';
 
 @Component({
   moduleId: module.id,
-  templateUrl: '../template/login.html'
+  templateUrl: '../template/register.html'
 })
-export class LoginComponent{
+export class RegisterComponent{
 
   constructor(
     private router: Router
   ) {
   }
 
-  login() {
-    alert('login');
-  }
-
-  toRegister() {
-    let link = ['/register'];
+  toLogin() {
+    let link = ['/login'];
 
     this.router.navigate(link);
   }

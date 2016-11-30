@@ -3,27 +3,23 @@ import {Router} from '@angular/router';
 
 @Component({
   moduleId: module.id,
-  templateUrl: '../template/login.html'
+  templateUrl: '../template/forget-password.html'
 })
-export class LoginComponent{
+export class ForgetPasswordComponent{
 
   constructor(
     private router: Router
   ) {
   }
 
-  login() {
-    alert('login');
-  }
-
-  toRegister() {
-    let link = ['/register'];
+  toLogin() {
+    let link = ['/login'];
 
     this.router.navigate(link);
   }
 
-  toForgetPassword() {
-    let link = ['/forget-password'];
+  toRegister() {
+    let link = ['/register'];
 
     this.router.navigate(link);
   }

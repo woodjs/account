@@ -7,6 +7,13 @@
   </div>
 
   <div class="input-group m-b-20">
+    <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+    <div class="fg-line">
+      <input type="text" class="form-control" placeholder="请输入注册邮箱">
+    </div>
+  </div>
+
+  <div class="input-group m-b-20">
     <span class="input-group-addon"><i class="zmdi zmdi-male"></i></span>
     <div class="fg-line">
       <input type="password" class="form-control" placeholder="请输入密码">
@@ -19,14 +26,14 @@
     <label>
       <input type="checkbox" value="">
       <i class="input-helper"></i>
-      记住我
+      Accept the license agreement
     </label>
   </div>
 
-  <a href="javascript:;" class="btn btn-login btn-danger btn-float" (click)="login();"><i class="zmdi zmdi-arrow-forward"></i></a>
+  <a href="" class="btn btn-login btn-danger btn-float"><i class="zmdi zmdi-arrow-forward"></i></a>
 
   <ul class="login-navigation">
-    <li class="bgm-red" (click)="toRegister();">注册</li>
+    <li class="bgm-green" (click)="toLogin();">登录</li>
     <li class="bgm-orange" (click)="toForgetPassword();">忘记密码？</li>
   </ul>
 </div>

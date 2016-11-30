@@ -2,7 +2,8 @@ import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
 import {LoginComponent} from '../component/login';
-import {IndexComponent} from '../component/index';
+import {RegisterComponent} from "../component/register";
+import {ForgetPasswordComponent} from "../component/forget-password";
 
 const routes: Routes = [{
   path: '',
@@ -12,8 +13,11 @@ const routes: Routes = [{
   path: 'login',
   component: LoginComponent
 }, {
-  path: 'index',
-  component: IndexComponent
+  path: 'register',
+  component: RegisterComponent
+}, {
+  path: 'forget-password',
+  component: ForgetPasswordComponent
 }];
 
 export const appRoute: ModuleWithProviders = RouterModule.forRoot(routes);

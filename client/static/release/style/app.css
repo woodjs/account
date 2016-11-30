@@ -15295,9 +15295,6 @@ html:not(.ie9) .select.fg-line:before {
   vertical-align: middle;
   position: relative;
 }
-.lc-block:not(.toggled) {
-  display: none;
-}
 .lc-block.toggled {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
