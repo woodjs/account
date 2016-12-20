@@ -3,7 +3,7 @@ import {Router} from '@angular/router';
 
 @Component({
   moduleId: module.id,
-  templateUrl: ''
+  templateUrl: './register.html'
 })
 export class RegisterComponent {
   constructor(

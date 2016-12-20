@@ -3,7 +3,10 @@ import {Routes, RouterModule} from '@angular/router';
 
 const routes: Routes = [{
     path: '',
-    redirectTo: 'login'
+    redirectTo: 'login',
+    pathMatch: 'full'
   }];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
+export const routing: ModuleWithProviders = RouterModule.forRoot(routes, {
+  useHash: true
+});

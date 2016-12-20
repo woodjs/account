@@ -6,16 +6,17 @@ import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
 
 import './config/rxjs-extension';
 
+import {PagesModule} from './pages/pages.module';
 import {AppComponent} from './app.component';
 import {routing} from './app.routing';
 
 @NgModule({
   imports: [
-    NgModule,
     FormsModule,
     HttpModule,
     BrowserModule,
     routing,
+    PagesModule,
     InMemoryWebApiModule.forRoot(null)
   ],
   declarations: [

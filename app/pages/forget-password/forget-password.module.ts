@@ -4,7 +4,6 @@ import {ForgetPasswordComponent} from './forget-password.component';
 
 @NgModule({
   imports: [
-    NgModule
   ],
   declarations: [
     ForgetPasswordComponent

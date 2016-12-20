@@ -4,7 +4,6 @@ import {RegisterComponent} from './register.component';
 
 @NgModule({
   imports: [
-    NgModule
   ],
   declarations: [
     RegisterComponent
