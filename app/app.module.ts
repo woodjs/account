@@ -1,10 +1,13 @@
 import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
-import {BrowserModule} from '@angular/platform-browser';
 import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
 
+import './config/rxjs-extension';
+
 import {AppComponent} from './app.component';
+import {routing} from './app.routing';
 
 @NgModule({
   imports: [
@@ -12,7 +15,8 @@ import {AppComponent} from './app.component';
     FormsModule,
     HttpModule,
     BrowserModule,
-    // InMemoryWebApiModule.forRoot()
+    routing,
+    InMemoryWebApiModule.forRoot(null)
   ],
   declarations: [
     AppComponent

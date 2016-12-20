@@ -1,15 +1,9 @@
+import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
-export const routes: Routes = [
-  {
+const routes: Routes = [{
     path: '',
-    redirectTo: 'pages',
-    pathMatch: 'full'
-  },
-  {
-    path: '**',
-    redirectTo: ''
-  }
-];
+    redirectTo: 'login'
+  }];
 
-export const routing = RouterModule.forRoot(routes, {userHash: true});
+export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
