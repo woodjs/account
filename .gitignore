@@ -8,7 +8,7 @@ node_modules/
 bower_components/
 typings/
 
-/client/**/*.js
-/client/**/*.js.map
+/app/**/*.js
+/app/**/*.js.map
 
 npm-debug.log
