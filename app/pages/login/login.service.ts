@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Http, Headers} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
-import {LoginSchema} from '../schemas/login';
+import {LoginSchema} from './login.schema';
 
 @Injectable()
 export class LoginService {
