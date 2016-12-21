@@ -1,13 +1,15 @@
 import {NgModule, ModuleWithProviders} from '@angular/core';
 
 import {FrameHeaderComponent} from "./components/frame-header/frame-header.component";
-import {FrameMainComponent} from "./components/frame-main/frame-main.component";
 import {FrameFooterComponent} from "./components/frame-footer/frame-footer.component";
+import {FrameNavComponent} from "./components/frame-nav/frame-nav.component";
+import {ProfileListComponent} from "./components/profile-list/profile-list.component";
 
 const FRAME_COMPONENTS = [
   FrameHeaderComponent,
-  FrameMainComponent,
-  FrameFooterComponent
+  FrameFooterComponent,
+  FrameNavComponent,
+  ProfileListComponent
 ];
 
 @NgModule({

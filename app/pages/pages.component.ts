@@ -5,9 +5,13 @@ import {Component} from '@angular/core';
   selector: 'pages',
   template: `
    <frame-header></frame-header>
-   <frame-main>
-    <router-outlet></router-outlet>
-   </frame-main>
+   <section id="main">
+    <frame-nav></frame-nav>
+    <profile-list></profile-list>
+    <section id="content">
+      <router-outlet></router-outlet>
+    </section>
+   </section>
    <frame-footer></frame-footer>
   `
 })

@@ -5,7 +5,10 @@ const routes: Routes = [{
     path: '',
     redirectTo: 'pages',
     pathMatch: 'full'
-  }];
+  }, {
+    path: '**',
+    redirectTo: 'pages/forms'
+}];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes, {
   useHash: true

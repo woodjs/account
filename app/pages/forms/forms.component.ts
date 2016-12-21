@@ -3,7 +3,7 @@ import {Component} from '@angular/core';
 @Component({
   moduleId: module.id,
   selector: 'forms',
-  template: `forms`
+  templateUrl: './forms.html'
 })
 export class FormsComponent {
 }
