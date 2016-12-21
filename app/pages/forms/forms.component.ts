@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  template: ''
+  selector: 'forms',
+  template: `forms`
 })
 export class FormsComponent {
-
 }

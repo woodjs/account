@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  template: ``
+  selector: '<frame-header></frame-header>',
+  templateUrl: './frame-header.html'
 })
 export class FrameHeaderComponent {
-
 }

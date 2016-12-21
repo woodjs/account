@@ -4,6 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import {ForgetPasswordComponent} from './forget-password/forget-password.component';
+import {FormsComponent} from "./forms/forms.component";
 
 const routes: Routes = [{
     path: 'login',
@@ -14,6 +15,16 @@ const routes: Routes = [{
   }, {
     path: 'forget-password',
     component: ForgetPasswordComponent
+  }, {
+    path: 'pages',
+    children: [{
+      path: '',
+      redirectTo: 'forms',
+      pathMatch: 'full'
+    }, {
+      path: 'forms',
+      component: FormsComponent
+    }]
   }];
 
 export const routing: ModuleWithProviders = RouterModule.forChild(routes);

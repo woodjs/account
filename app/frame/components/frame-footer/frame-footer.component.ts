@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  template: ``
+  selector: 'frame-footer',
+  templateUrl: './frame-footer.html'
 })
 export class FrameFooterComponent {
-
 }
