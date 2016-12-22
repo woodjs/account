@@ -10,9 +10,6 @@ import {FrameModule} from './frame/frame.module';
 import {PagesModule} from './pages/pages.module';
 import {AppComponent} from './app.component';
 import {routing} from './app.routing';
-import {FrameHeaderComponent} from "./frame/components/frame-header/frame-header.component";
-import {FrameMainComponent} from "./frame/components/frame-main/frame-main.component";
-import {FrameFooterComponent} from "./frame/components/frame-footer/frame-footer.component";
 
 @NgModule({
   imports: [
