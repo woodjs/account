@@ -10,6 +10,7 @@ import {FrameModule} from './frame/frame.module';
 import {PagesModule} from './pages/pages.module';
 import {AppComponent} from './app.component';
 import {routing} from './app.routing';
+import {AppStateService} from "./app-state.service";
 
 @NgModule({
   imports: [
@@ -23,6 +24,9 @@ import {routing} from './app.routing';
   ],
   declarations: [
     AppComponent
+  ],
+  providers: [
+    AppStateService
   ],
   bootstrap: [
     AppComponent
