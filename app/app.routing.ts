@@ -7,7 +7,7 @@ const routes: Routes = [{
     pathMatch: 'full'
   }, {
     path: '**',
-    redirectTo: 'pages/forms'
+    redirectTo: 'pages/dashboard'
 }];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes, {

@@ -4,12 +4,14 @@ import {FrameHeaderComponent} from "./components/frame-header/frame-header.compo
 import {FrameFooterComponent} from "./components/frame-footer/frame-footer.component";
 import {FrameNavComponent} from "./components/frame-nav/frame-nav.component";
 import {ProfileListComponent} from "./components/profile-list/profile-list.component";
+import {PageLoaderComponent} from "./components/page-loader/page-loader.component";
 
 const FRAME_COMPONENTS = [
   FrameHeaderComponent,
   FrameFooterComponent,
   FrameNavComponent,
-  ProfileListComponent
+  ProfileListComponent,
+  PageLoaderComponent
 ];
 
 @NgModule({
