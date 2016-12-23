@@ -23,7 +23,7 @@ export class AppStateService {
   subscribe(event: string, callback: Function) {
     let subscribers = this._subscribeMap.get(event) || [];
 
-    subscribers = subscribers.push(callback);
+    subscribers.push(callback);
 
     this._subscribeMap.set(event, subscribers);
   }

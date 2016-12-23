@@ -25,10 +25,8 @@
 
   <base href="/">
 </head>
-<body>
-  <app></app>
-  <div id="pre-loader"></div>
-
+<body [ngClass]="layoutClass">
+  <div>loading</div>
   <!-- Older IE warning message -->
   <!--[if lt IE 9]>
   <div class="ie-warning">
