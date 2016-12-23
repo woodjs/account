@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
 
 @Injectable()
-export class AppStateService {
+export class AppEventService {
 
   private _data = new Subject<Object>();
   private _dataStream$ = this._data.asObservable();
@@ -29,9 +29,9 @@ export class AppStateService {
   }
 
   notifyDataChanged(event, value) {
-    let curValue = this._data[event];
+    let prevValue = this._data[event];
 
-    if (curValue !== value) {
+    if ((typeof prevValue === 'undefined') || (prevValue !== value)) {
       this._data[event] = value;
       this._data.next({
         event: event,
@@ -39,4 +39,9 @@ export class AppStateService {
       });
     }
   }
+}
+
+@Injectable()
+export class LayoutStateService {
+  layoutMode: string;
 }

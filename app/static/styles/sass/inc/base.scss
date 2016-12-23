@@ -67,7 +67,7 @@ body {
     padding-left: $sidebar-left-width;
    }
 
-   & > .container {
+   &  .container {
     @media (min-width: $screen-lg-min) {
      width: calc(100% - 30px);
     }

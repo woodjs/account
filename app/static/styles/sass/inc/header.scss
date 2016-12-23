@@ -287,7 +287,7 @@
     }
    }
 
-   input:checked + .ts-helper {
+   &[data-checked='true']  .ts-helper {
     background: rgba(0, 0, 0, 0.26);
     &:before {
      left: 18px;

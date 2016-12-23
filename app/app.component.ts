@@ -1,6 +1,6 @@
 import {Component, HostBinding} from '@angular/core';
 
-import {AppStateService} from './app.service';
+import {AppEventService, LayoutStateService} from './app.service';
 import {APP_LAYOUT_MODE} from './app.constant';
 
 @Component({
@@ -10,14 +10,14 @@ import {APP_LAYOUT_MODE} from './app.constant';
 })
 export class AppComponent {
 
-  @HostBinding('class.toggled')
   @HostBinding('class.sw-toggled')
   _isWideMode = true;
 
   constructor(
-    private _appState: AppStateService
+    private _appEvent: AppEventService,
+    private _layoutState: LayoutStateService
   ) {
-    this._appState.subscribe('app.layout', (layoutMode) => {
+    this._appEvent.subscribe('app.layout', (layoutMode) => {
 
       this.setLayoutClass(layoutMode);
       localStorage.setItem('app-layout-mode', layoutMode);
@@ -27,6 +27,7 @@ export class AppComponent {
   ngOnInit() {
     let layoutMode = localStorage.getItem('app-layout-mode') || APP_LAYOUT_MODE.wideHasNav;
 
+    this._layoutState.layoutMode = layoutMode;
     this.setLayoutClass(layoutMode);
   }
 

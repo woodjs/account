@@ -9,9 +9,9 @@ var concat = require('gulp-concat');
 
 var basePath = '';
 var pathMap = {
-  cssSrcPath: './app/static/style/sass/app.scss',
-  cssDistPath: './app/static/release/style/',
-  minCssDistPath: './app/static/release/style/',
+  cssSrcPath: './app/static/styles/sass/app.scss',
+  cssDistPath: './app/static/release/styles/',
+  minCssDistPath: './app/static/release/styles/',
   jsSrcPath: [],
   jsDistPath: '',
   imgSrcPath: '',
