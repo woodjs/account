@@ -31,7 +31,7 @@ export class AppEventService {
   notifyDataChanged(event, value) {
     let prevValue = this._data[event];
 
-    if ((typeof prevValue === 'undefined') || (prevValue !== value)) {
+    if (prevValue !== value) {
       this._data[event] = value;
       this._data.next({
         event: event,
