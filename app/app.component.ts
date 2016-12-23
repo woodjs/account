@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, HostBinding} from '@angular/core';
 
 import {AppStateService} from './app.service';
 import {APP_LAYOUT_MODE} from './app.constant';
@@ -9,7 +9,10 @@ import {APP_LAYOUT_MODE} from './app.constant';
   template: '<router-outlet></router-outlet>'
 })
 export class AppComponent {
-  layoutClass: string = '';
+
+  @HostBinding('class.toggled')
+  @HostBinding('class.sw-toggled')
+  _isWideMode = true;
 
   constructor(
     private _appState: AppStateService
@@ -28,6 +31,6 @@ export class AppComponent {
   }
 
   setLayoutClass(layoutMode) {
-    this.layoutClass = layoutMode === APP_LAYOUT_MODE.wideHasNav ? 'toggled sw-toggled' : '';
+    this._isWideMode = layoutMode === APP_LAYOUT_MODE.wideHasNav ? true : false;
   }
 }
