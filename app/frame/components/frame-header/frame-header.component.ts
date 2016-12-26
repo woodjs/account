@@ -9,27 +9,43 @@ import {APP_LAYOUT_MODE} from '../../../app.constant';
   templateUrl: './frame-header.html'
 })
 export class FrameHeaderComponent {
-  private _checked: boolean = false;  // 控制页面布局模式
-  private _showSearch: boolean = false;
+  isChecked: boolean = false;  // 控制页面布局模式
+  isShowProfileList: boolean = false;
+  controlObj = {
+    isShowSearch: false,
+    isShowMessage: false,
+    isShowNotification: false,
+    isShowProgress: false,
+    isShowOperation: false
+  };
 
-  constructor(
-    private _appEvent: AppEventService,
-    private _layoutState: LayoutStateService
-  ) {
-    this._checked = _layoutState.layoutMode === APP_LAYOUT_MODE.wideHasNav;
+  constructor(private _appEvent: AppEventService,
+              private _layoutState: LayoutStateService) {
+    this.isChecked = _layoutState.layoutMode === APP_LAYOUT_MODE.wideHasNav;
   }
 
   ngOnInit() {
   }
 
   toggleLayoutMode() {
-    let layoutMode = this._checked === true ? APP_LAYOUT_MODE.thinNoNav : APP_LAYOUT_MODE.wideHasNav;
+    let layoutMode = this.isChecked === true ? APP_LAYOUT_MODE.thinNoNav : APP_LAYOUT_MODE.wideHasNav;
     this._appEvent.notifyDataChanged('app.layout', layoutMode);
 
-    this._checked = !this._checked;
+    this.isChecked = !this.isChecked;
   }
 
-  toggleSearch() {
-    this._showSearch = !this._showSearch;
+  toggleProfileList() {
+    let nextState = !this.isShowProfileList;
+
+    this._appEvent.notifyDataChanged('profile-list:show', nextState);
+    this.isShowProfileList = nextState;
+  }
+
+  toggleComponent(code: string) {
+    for (var key in this.controlObj) {
+      if (this.controlObj.hasOwnProperty(key)) {
+        this.controlObj[key] = key === code;
+      }
+    }
   }
 }

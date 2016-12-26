@@ -11,7 +11,7 @@ import {APP_LAYOUT_MODE} from './app.constant';
 export class AppComponent {
 
   @HostBinding('class.sw-toggled')
-  _isWideMode = true;
+  isWideMode = true;
 
   constructor(
     private _appEvent: AppEventService,
@@ -32,6 +32,6 @@ export class AppComponent {
   }
 
   setLayoutClass(layoutMode) {
-    this._isWideMode = layoutMode === APP_LAYOUT_MODE.wideHasNav ? true : false;
+    this.isWideMode = layoutMode === APP_LAYOUT_MODE.wideHasNav ? true : false;
   }
 }
