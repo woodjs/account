@@ -1,4 +1,4 @@
-<header id="header" class="clearfix" data-current-skin="blue">
+<header id="header" class="clearfix" data-current-skin="blue" [class.search-toggled]="_showSearch">
   <ul class="header-inner">
     <li id="menu-trigger" data-trigger="#sidebar">
       <div class="line-wrap">
@@ -21,7 +21,7 @@
         </li>
 
         <li id="top-search">
-          <a href=""><i class="tm-icon zmdi zmdi-search"></i></a>
+          <a href="javascript:;" (click)="toggleSearch()"><i class="tm-icon zmdi zmdi-search"></i></a>
         </li>
 
         <li class="dropdown">
@@ -274,7 +274,7 @@
   <!-- Top Search Content -->
   <div id="top-search-wrap">
     <div class="tsw-inner">
-      <i id="top-search-close" class="zmdi zmdi-arrow-left"></i>
+      <i id="top-search-close" class="zmdi zmdi-arrow-left" (click)="toggleSearch()"></i>
       <input type="text">
     </div>
   </div>

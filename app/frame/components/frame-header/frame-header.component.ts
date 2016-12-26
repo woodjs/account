@@ -9,7 +9,8 @@ import {APP_LAYOUT_MODE} from '../../../app.constant';
   templateUrl: './frame-header.html'
 })
 export class FrameHeaderComponent {
-  private _checked: boolean = false;
+  private _checked: boolean = false;  // 控制页面布局模式
+  private _showSearch: boolean = false;
 
   constructor(
     private _appEvent: AppEventService,
@@ -26,5 +27,9 @@ export class FrameHeaderComponent {
     this._appEvent.notifyDataChanged('app.layout', layoutMode);
 
     this._checked = !this._checked;
+  }
+
+  toggleSearch() {
+    this._showSearch = !this._showSearch;
   }
 }
