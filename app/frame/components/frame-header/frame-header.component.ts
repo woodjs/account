@@ -10,6 +10,7 @@ import {APP_LAYOUT_MODE} from '../../../app.constant';
 })
 export class FrameHeaderComponent {
   isChecked: boolean = false;  // 控制页面布局模式
+  isShowNav: boolean = false;
   isShowProfileList: boolean = false;
   controlObj = {
     isShowSearch: false,
@@ -39,6 +40,13 @@ export class FrameHeaderComponent {
 
     this._appEvent.notifyDataChanged('profile-list:show', nextState);
     this.isShowProfileList = nextState;
+  }
+
+  toggleNav() {
+    let nextState = !this.isShowNav;
+
+    this._appEvent.notifyDataChanged('nav:show', nextState);
+    this.isShowNav = nextState;
   }
 
   toggleComponent(code: string) {

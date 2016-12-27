@@ -1,6 +1,6 @@
 <header id="header" class="clearfix" data-current-skin="blue" [class.search-toggled]="controlObj.isShowSearch">
   <ul class="header-inner">
-    <li id="menu-trigger" data-trigger="#sidebar">
+    <li id="menu-trigger" data-trigger="#sidebar" [class.open]="isShowNav" (click)="toggleNav()">
       <div class="line-wrap">
         <div class="line top"></div>
         <div class="line center"></div>
