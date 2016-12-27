@@ -1,6 +1,8 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef} from '@angular/core';
 
 import {AppEventService} from '../../../app.service';
+
+declare var jQuery: any;
 
 @Component({
   moduleId: module.id,
@@ -11,6 +13,7 @@ export class FrameNavComponent {
   isShowNav: boolean;
 
   constructor(
+    private _eleRef: ElementRef,
     private _appEvent: AppEventService
   ) {
     this._appEvent.subscribe('nav:show', (state: boolean) => {
@@ -18,4 +21,16 @@ export class FrameNavComponent {
     })
   }
 
+  ngAfterViewInit() {
+    jQuery && jQuery('#frame-nav').mCustomScrollbar({
+      theme: 'minimal-dark',
+      scrollInertia: 100,
+      axis:'yx',
+      mouseWheel: {
+        enable: true,
+        axis: 'y',
+        preventDefault: true
+      }
+    });
+  }
 }

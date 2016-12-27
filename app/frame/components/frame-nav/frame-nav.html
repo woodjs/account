@@ -1,8 +1,8 @@
-<aside id="sidebar" class="sidebar c-overflow" [class.toggled]="isShowNav">
+<aside id="frame-nav" class="sidebar c-overflow" [class.toggled]="isShowNav">
   <div class="profile-menu">
     <a href="">
       <div class="profile-pic">
-        <img src="../images/profile-pics/1.jpg" alt="">
+        <img src="{{ '/profile-pics/1.jpg' | profilePicturePipe }}" alt="">
       </div>
 
       <div class="profile-info">

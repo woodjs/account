@@ -1,10 +1,18 @@
 import {NgModule, ModuleWithProviders} from '@angular/core';
 
-import {FrameHeaderComponent} from "./components/frame-header/frame-header.component";
-import {FrameFooterComponent} from "./components/frame-footer/frame-footer.component";
-import {FrameNavComponent} from "./components/frame-nav/frame-nav.component";
-import {ProfileListComponent} from "./components/profile-list/profile-list.component";
-import {PageLoaderComponent} from "./components/page-loader/page-loader.component";
+import {FramePicturePipe} from './pipes/frame-picture.pipe';
+import {ProfilePicturePipe} from './pipes/profile-picture.pipe';
+
+import {FrameHeaderComponent} from './components/frame-header/frame-header.component';
+import {FrameFooterComponent} from './components/frame-footer/frame-footer.component';
+import {FrameNavComponent} from './components/frame-nav/frame-nav.component';
+import {ProfileListComponent} from './components/profile-list/profile-list.component';
+import {PageLoaderComponent} from './components/page-loader/page-loader.component';
+
+const FRAME_PIPES = [
+  FramePicturePipe,
+  ProfilePicturePipe
+];
 
 const FRAME_COMPONENTS = [
   FrameHeaderComponent,
@@ -17,9 +25,11 @@ const FRAME_COMPONENTS = [
 @NgModule({
   imports: [],
   declarations: [
+    ...FRAME_PIPES,
     ...FRAME_COMPONENTS
   ],
   exports: [
+    ...FRAME_PIPES,
     ...FRAME_COMPONENTS
   ]
 })
