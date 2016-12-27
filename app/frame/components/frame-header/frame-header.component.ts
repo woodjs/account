@@ -20,6 +20,7 @@ export class FrameHeaderComponent {
   }
 
   ngOnInit() {
+    this._appEvent.notifyDataChanged('nav:show', this.isChecked);
   }
 
   toggleLayoutMode() {
@@ -27,6 +28,7 @@ export class FrameHeaderComponent {
     this._appEvent.notifyDataChanged('app.layout', layoutMode);
 
     this.isChecked = !this.isChecked;
+    this._appEvent.notifyDataChanged('nav:show', this.isChecked);
   }
 
   toggleSearch() {
