@@ -1,4 +1,4 @@
-<header id="header" class="clearfix" data-current-skin="blue" [class.search-toggled]="controlObj.isShowSearch">
+<header id="header" class="clearfix" data-current-skin="blue" [class.search-toggled]="isShowSearch">
   <ul class="header-inner">
     <li id="menu-trigger" data-trigger="#sidebar" [class.open]="isShowNav" (click)="toggleNav()">
       <div class="line-wrap">
@@ -21,11 +21,11 @@
         </li>
 
         <li id="top-search">
-          <a href="javascript:;" (click)="toggleComponent('isShowSearch')"><i class="tm-icon zmdi zmdi-search"></i></a>
+          <a href="javascript:;" (click)="toggleSearch()"><i class="tm-icon zmdi zmdi-search"></i></a>
         </li>
 
-        <li class="dropdown" [class.open]="controlObj.isShowMessage">
-          <a data-toggle="dropdown" href="javascript:;" (click)="toggleComponent('isShowMessage')">
+        <li class="dropdown">
+          <a data-toggle="dropdown" href="javascript:;">
             <i class="tm-icon zmdi zmdi-email"></i>
             <i class="tmn-counts">6</i>
           </a>
@@ -95,8 +95,8 @@
             </div>
           </div>
         </li>
-        <li class="dropdown" [class.open]="controlObj.isShowNotification">
-          <a data-toggle="dropdown" href="javascript:;" (click)="toggleComponent('isShowNotification')">
+        <li class="dropdown">
+          <a data-toggle="dropdown" href="javascript:;">
             <i class="tm-icon zmdi zmdi-notifications"></i>
             <i class="tmn-counts">9</i>
           </a>
@@ -176,8 +176,8 @@
 
           </div>
         </li>
-        <li class="dropdown hidden-xs" [class.open]="controlObj.isShowProgress">
-          <a data-toggle="dropdown" href="javascript:;" (click)="toggleComponent('isShowProgress')">
+        <li class="dropdown hidden-xs">
+          <a data-toggle="dropdown" href="javascript:;">
             <i class="tm-icon zmdi zmdi-view-list-alt"></i>
             <i class="tmn-counts">2</i>
           </a>
@@ -238,8 +238,8 @@
             </div>
           </div>
         </li>
-        <li class="dropdown" [class.open]="controlObj.isShowOperation">
-          <a data-toggle="dropdown" href="javascript:;" (click)="toggleComponent('isShowOperation')"><i class="tm-icon zmdi zmdi-more-vert"></i></a>
+        <li class="dropdown">
+          <a data-toggle="dropdown" href="javascript:;"><i class="tm-icon zmdi zmdi-more-vert"></i></a>
           <ul class="dropdown-menu dm-icon pull-right">
             <li class="skin-switch hidden-xs">
               <span class="ss-skin bgm-lightblue" data-skin="lightblue"></span>
@@ -274,7 +274,7 @@
   <!-- Top Search Content -->
   <div id="top-search-wrap">
     <div class="tsw-inner">
-      <i id="top-search-close" class="zmdi zmdi-arrow-left" (click)="toggleComponent('')"></i>
+      <i id="top-search-close" class="zmdi zmdi-arrow-left" (click)="toggleSearch()"></i>
       <input type="text">
     </div>
   </div>

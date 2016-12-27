@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 
 import {AppEventService, LayoutStateService} from '../../../app.service';
 import {APP_LAYOUT_MODE} from '../../../app.constant';
@@ -10,15 +10,9 @@ import {APP_LAYOUT_MODE} from '../../../app.constant';
 })
 export class FrameHeaderComponent {
   isChecked: boolean = false;  // 控制页面布局模式
+  isShowSearch: boolean = false;
   isShowNav: boolean = false;
   isShowProfileList: boolean = false;
-  controlObj = {
-    isShowSearch: false,
-    isShowMessage: false,
-    isShowNotification: false,
-    isShowProgress: false,
-    isShowOperation: false
-  };
 
   constructor(private _appEvent: AppEventService,
               private _layoutState: LayoutStateService) {
@@ -35,11 +29,8 @@ export class FrameHeaderComponent {
     this.isChecked = !this.isChecked;
   }
 
-  toggleProfileList() {
-    let nextState = !this.isShowProfileList;
-
-    this._appEvent.notifyDataChanged('profile-list:show', nextState);
-    this.isShowProfileList = nextState;
+  toggleSearch() {
+    this.isShowSearch = !this.isShowSearch;
   }
 
   toggleNav() {
@@ -49,11 +40,10 @@ export class FrameHeaderComponent {
     this.isShowNav = nextState;
   }
 
-  toggleComponent(code: string) {
-    for (var key in this.controlObj) {
-      if (this.controlObj.hasOwnProperty(key)) {
-        this.controlObj[key] = key === code;
-      }
-    }
+  toggleProfileList() {
+    let nextState = !this.isShowProfileList;
+
+    this._appEvent.notifyDataChanged('profile-list:show', nextState);
+    this.isShowProfileList = nextState;
   }
 }
