@@ -145,7 +145,7 @@
   position: absolute;
   width: 100%;
   height: calc(100% - 70px);
-  background: url(../img/notifications.png) no-repeat center;
+  background: url(./images/notifications.png) no-repeat center;
   @include transition(all);
   @include transition-duration(400ms);
   @include scale-rotate(0, -180deg);

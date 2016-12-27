@@ -11311,7 +11311,7 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h4 small, .h4 sma
   position: absolute;
   width: 100%;
   height: calc(100% - 70px);
-  background: url(../img/notifications.png) no-repeat center;
+  background: url(./images/notifications.png) no-repeat center;
   -webkit-transition: all;
   -o-transition: all;
   transition: all;
@@ -11647,7 +11647,7 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h4 small, .h4 sma
   height: 129px;
   margin-bottom: 5px;
   width: 100%;
-  background: url(../img/profile-menu.png) no-repeat left top;
+  background: url(./images/profile-menu.png) no-repeat left top;
   background-size: 100%;
 }
 .profile-menu > a .profile-pic {
@@ -12204,7 +12204,7 @@ a.lv-footer:hover {
   padding: 20px 20px 15px 20px;
 }
 #chat .chat-search .form-control {
-  background-image: url("../img/icons/search-2.png");
+  background-image: url("./images/icons/search-2.png");
   background-repeat: no-repeat;
   background-position: left center;
   padding-left: 30px;
@@ -12216,7 +12216,7 @@ a.lv-footer:hover {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #chat .chat-search .form-control {
-    background-image: url("../img/icons/search-2@2x.png");
+    background-image: url("./images/icons/search-2@2x.png");
     background-size: 24px 24px;
   }
 }

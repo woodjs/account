@@ -14,9 +14,8 @@ var pathMap = {
   minCssDistPath: './app/static/release/styles/',
   jsSrcPath: [],
   jsDistPath: '',
-  imgSrcPath: '',
-  imgDistPath: '',
-  minImgDistPath: ''
+  imgSrcPath: './app/static/styles/sass/images/**',
+  imgDistPath: './app/static/release/styles/images/'
 };
 
 var concatJsName = 'app.js';  // 配置合并js操作生成的目标文件名，.js不可省略
@@ -48,7 +47,6 @@ gulp.task('css', function () {
 gulp.task('imgcopy', function () {
   return gulp.src(pathMap.imgSrcPath)
     .pipe(gulp.dest(pathMap.imgDistPath))
-    .pipe(gulp.dest(pathMap.minImgDistPath))
     .on('end', function () {
       console.log('task imgcopy finished!');
     });
@@ -68,5 +66,5 @@ gulp.task('js', function () {
 
 // 默认任务
 gulp.task('default', function () {
-  gulp.start('css');
+  gulp.start(['css', 'imgcopy']);
 });

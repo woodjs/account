@@ -11,7 +11,7 @@
   padding: 20px 20px 15px 20px;
 
   .form-control {
-   @include img-retina('../img/icons/search-2.png', '../img/icons/search-2@2x.png', 24px, 24px);
+   @include img-retina('./images/icons/search-2.png', './images/icons/search-2@2x.png', 24px, 24px);
    background-repeat: no-repeat;
    background-position: left center;
    padding-left: 30px;
