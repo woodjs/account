@@ -23,7 +23,7 @@ export class FrameNavComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    jQuery && jQuery('#frame-nav').mCustomScrollbar({
+    jQuery && jQuery('#sidebar').mCustomScrollbar({
       theme: 'minimal-dark',
       scrollInertia: 100,
       axis:'yx',
