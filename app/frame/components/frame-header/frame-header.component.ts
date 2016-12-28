@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 import {AppEventService, LayoutStateService} from '../../../app.service';
 import {APP_LAYOUT_MODE} from '../../../app.constant';
@@ -8,7 +8,7 @@ import {APP_LAYOUT_MODE} from '../../../app.constant';
   selector: 'frame-header',
   templateUrl: './frame-header.html'
 })
-export class FrameHeaderComponent {
+export class FrameHeaderComponent implements OnInit{
   isChecked: boolean = false;  // 控制页面布局模式
   isShowSearch: boolean = false;
   isShowNav: boolean = false;

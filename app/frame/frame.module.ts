@@ -1,4 +1,5 @@
 import {NgModule, ModuleWithProviders} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
 import {FramePicturePipe} from './pipes/frame-picture.pipe';
 import {ProfilePicturePipe} from './pipes/profile-picture.pipe';
@@ -23,7 +24,9 @@ const FRAME_COMPONENTS = [
 ];
 
 @NgModule({
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   declarations: [
     ...FRAME_PIPES,
     ...FRAME_COMPONENTS

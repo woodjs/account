@@ -1,6 +1,6 @@
 <aside id="frame-nav" class="sidebar c-overflow" [class.toggled]="isShowNav">
   <div class="profile-menu">
-    <a href="">
+    <a href="javascript:;">
       <div class="profile-pic">
         <img src="{{ '/profile-pics/1.jpg' | profilePicturePipe }}" alt="">
       </div>
@@ -30,8 +30,8 @@
 
   <ul class="main-menu">
     <li><a href="index.html"><i class="zmdi zmdi-home"></i> Home</a></li>
-    <li class="sub-menu">
-      <a href=""><i class="zmdi zmdi-view-compact"></i> Headers</a>
+    <li class="sub-menu" (click)="toggleSubMenu('headers')" [ngClass]="{active: activeItems['headers'], toggled: activeItems['headers']}">
+      <a href="javascript:;"><i class="zmdi zmdi-view-compact"></i> Headers</a>
 
       <ul>
         <li><a href="textual-menu.html">Textual menu</a></li>
@@ -40,34 +40,34 @@
       </ul>
     </li>
     <li><a href="typography.html"><i class="zmdi zmdi-format-underlined"></i> Typography</a></li>
-    <li class="sub-menu">
-      <a href=""><i class="zmdi zmdi-widgets"></i> Widgets</a>
+    <li class="sub-menu" (click)="toggleSubMenu('widgets')" [ngClass]="{active: activeItems['widgets'], toggled: activeItems['widgets']}">
+      <a href="javascript:;"><i class="zmdi zmdi-widgets"></i> Widgets</a>
 
       <ul>
         <li><a href="widget-templates.html">Templates</a></li>
         <li><a href="widgets.html">Widgets</a></li>
       </ul>
     </li>
-    <li class="sub-menu">
-      <a href=""><i class="zmdi zmdi-view-list"></i> Tables</a>
+    <li class="sub-menu" (click)="toggleSubMenu('tables')" [ngClass]="{active: activeItems['tables'], toggled: activeItems['tables']}">
+      <a href="javascript:;"><i class="zmdi zmdi-view-list"></i> Tables</a>
 
       <ul>
         <li><a href="tables.html">Normal Tables</a></li>
         <li><a href="data-tables.html">Data Tables</a></li>
       </ul>
     </li>
-    <li class="sub-menu active toggled">
-      <a href=""><i class="zmdi zmdi-collection-text"></i> Forms</a>
+    <li class="sub-menu" (click)="toggleSubMenu('forms')" [ngClass]="{active: activeItems['forms'], toggled: activeItems['forms']}">
+      <a href="javascript:;"><i class="zmdi zmdi-collection-text"></i> Forms</a>
 
       <ul>
         <li><a href="form-elements.html">Basic Form Elements</a></li>
-        <li><a class="active" href="form-components.html">Form Components</a></li>
+        <li><a href="form-components.html">Form Components</a></li>
         <li><a href="form-examples.html">Form Examples</a></li>
         <li><a href="form-validations.html">Form Validation</a></li>
       </ul>
     </li>
-    <li class="sub-menu">
-      <a href=""><i class="zmdi zmdi-swap-alt"></i>User Interface</a>
+    <li class="sub-menu" (click)="toggleSubMenu('ui')" [ngClass]="{active: activeItems['ui'], toggled: activeItems['ui']}">
+      <a href="javascript:;"><i class="zmdi zmdi-swap-alt"></i>User Interface</a>
       <ul>
         <li><a href="colors.html">Colors</a></li>
         <li><a href="animations.html">Animations</a></li>
@@ -82,16 +82,16 @@
         <li><a href="other-components.html">Others</a></li>
       </ul>
     </li>
-    <li class="sub-menu">
-      <a href=""><i class="zmdi zmdi-trending-up"></i>Charts</a>
+    <li class="sub-menu" (click)="toggleSubMenu('charts')" [ngClass]="{active: activeItems['charts'], toggled: activeItems['charts']}">
+      <a href="javascript:;"><i class="zmdi zmdi-trending-up"></i>Charts</a>
       <ul>
         <li><a href="flot-charts.html">Flot Charts</a></li>
         <li><a href="other-charts.html">Other Charts</a></li>
       </ul>
     </li>
     <li><a href="calendar.html"><i class="zmdi zmdi-calendar"></i> Calendar</a></li>
-    <li class="sub-menu">
-      <a href=""><i class="zmdi zmdi-image"></i>Photo Gallery</a>
+    <li class="sub-menu" (click)="toggleSubMenu('gallery')" [ngClass]="{active: activeItems['gallery'], toggled: activeItems['gallery']}">
+      <a href="javascript:;"><i class="zmdi zmdi-image"></i>Photo Gallery</a>
       <ul>
         <li><a href="photos.html">Default</a></li>
         <li><a href="photo-timeline.html">Timeline</a></li>
@@ -99,8 +99,8 @@
     </li>
 
     <li><a href="generic-classes.html"><i class="zmdi zmdi-layers"></i> Generic Classes</a></li>
-    <li class="sub-menu">
-      <a href=""><i class="zmdi zmdi-collection-item"></i> Sample Pages</a>
+    <li class="sub-menu" (click)="toggleSubMenu('pages')" [ngClass]="{active: activeItems['pages'], toggled: activeItems['pages']}">
+      <a href="javascript:;"><i class="zmdi zmdi-collection-item"></i> Sample Pages</a>
       <ul>
 
         <li><a href="profile-about.html">Profile</a></li>
@@ -116,8 +116,8 @@
 
       </ul>
     </li>
-    <li class="sub-menu">
-      <a href="form-examples.html"><i class="zmdi zmdi-menu"></i> 3 Level Menu</a>
+    <li class="sub-menu" (click)="toggleSubMenu('menu')" [ngClass]="{active: activeItems['menu'], toggled: activeItems['menu']}">
+      <a href="javascript:;"><i class="zmdi zmdi-menu" ></i> 3 Level Menu</a>  <!-- form-examples.html -->
 
       <ul>
         <li><a href="form-elements.html">Level 2 link</a></li>

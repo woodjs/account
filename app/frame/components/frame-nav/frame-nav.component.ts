@@ -1,4 +1,4 @@
-import {Component, ElementRef} from '@angular/core';
+import {Component, ElementRef, AfterViewInit} from '@angular/core';
 
 import {AppEventService} from '../../../app.service';
 
@@ -9,8 +9,9 @@ declare var jQuery: any;
   selector: 'frame-nav',
   templateUrl: './frame-nav.html'
 })
-export class FrameNavComponent {
+export class FrameNavComponent implements AfterViewInit {
   isShowNav: boolean;
+  activeItems: Object = {};
 
   constructor(
     private _eleRef: ElementRef,
@@ -32,5 +33,9 @@ export class FrameNavComponent {
         preventDefault: true
       }
     });
+  }
+
+  toggleSubMenu(code: string) {
+    this.activeItems[code] = !this.activeItems[code];
   }
 }

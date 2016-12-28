@@ -3,7 +3,8 @@ import {NgModule} from '@angular/core';
 import {FrameNavComponent} from './frame-nav.component';
 
 @NgModule({
-  imports: [],
+  imports: [
+  ],
   declarations: [
     FrameNavComponent
   ]

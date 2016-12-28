@@ -1,4 +1,4 @@
-import {Component, HostBinding} from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core';
 
 import {AppEventService, LayoutStateService} from './app.service';
 import {APP_LAYOUT_MODE} from './app.constant';
@@ -8,7 +8,7 @@ import {APP_LAYOUT_MODE} from './app.constant';
   selector: 'body',
   template: '<router-outlet></router-outlet>'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
 
   @HostBinding('class.sw-toggled')
   isWideMode = true;
