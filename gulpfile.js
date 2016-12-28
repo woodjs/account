@@ -9,13 +9,13 @@ var concat = require('gulp-concat');
 
 var basePath = '';
 var pathMap = {
-  cssSrcPath: './app/static/styles/sass/app.scss',
-  cssDistPath: './app/static/release/styles/',
-  minCssDistPath: './app/static/release/styles/',
+  cssSrcPath: './app/assets/styles/sass/app.scss',
+  cssDistPath: './app/assets/release/styles/',
+  minCssDistPath: './app/assets/release/styles/',
   jsSrcPath: [],
   jsDistPath: '',
-  imgSrcPath: './app/static/styles/sass/images/**',
-  imgDistPath: './app/static/release/styles/images/'
+  imgSrcPath: './app/assets/styles/sass/images/**',
+  imgDistPath: './app/assets/release/styles/images/'
 };
 
 var concatJsName = 'app.js';  // 配置合并js操作生成的目标文件名，.js不可省略
