@@ -1,5 +1,4 @@
-import {Component} from '@angular/core';
-import {AppEventService} from '../../../app.service';
+import {Component, Inject} from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -11,7 +10,7 @@ export class ProfileListComponent {
   isShowProfileList: boolean = false;
 
   constructor(
-    private _appEvent: AppEventService
+    @Inject('appEvent') private _appEvent
   ) {
     this._appEvent.subscribe('profile-list:show', (state: boolean) => {
       this.isShowProfileList = state;

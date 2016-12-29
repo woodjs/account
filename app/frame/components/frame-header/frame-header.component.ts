@@ -1,6 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Inject} from '@angular/core';
 
-import {AppEventService, LayoutStateService} from '../../../app.service';
 import {APP_LAYOUT_MODE} from '../../../app.constant';
 
 @Component({
@@ -14,8 +13,10 @@ export class FrameHeaderComponent implements OnInit{
   isShowNav: boolean = false;
   isShowProfileList: boolean = false;
 
-  constructor(private _appEvent: AppEventService,
-              private _layoutState: LayoutStateService) {
+  constructor(
+    @Inject('appEvent') private _appEvent,
+    @Inject('layoutState') private _layoutState
+  ) {
     this.isChecked = _layoutState.layoutMode === APP_LAYOUT_MODE.wideHasNav;
   }
 

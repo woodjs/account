@@ -1,6 +1,4 @@
-import {Component, ElementRef, AfterViewInit} from '@angular/core';
-
-import {AppEventService} from '../../../app.service';
+import {Component, ElementRef, AfterViewInit, Inject} from '@angular/core';
 
 declare var jQuery: any;
 
@@ -14,8 +12,7 @@ export class FrameNavComponent implements AfterViewInit {
   activeItems: Object = {};
 
   constructor(
-    private _eleRef: ElementRef,
-    private _appEvent: AppEventService
+    @Inject('appEvent') private _appEvent
   ) {
     this._appEvent.subscribe('nav:show', (state: boolean) => {
       this.isShowNav = state;
