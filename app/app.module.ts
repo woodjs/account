@@ -26,8 +26,8 @@ import {AppEventService, LayoutStateService} from "./app.service";
     AppComponent
   ],
   providers: [
-    AppEventService,
-    LayoutStateService
+    {provide: 'appEvent', useClass: AppEventService},
+    {provide: 'layoutState', useClass: LayoutStateService}
   ],
   bootstrap: [
     AppComponent

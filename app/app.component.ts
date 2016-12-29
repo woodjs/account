@@ -1,6 +1,5 @@
-import {Component, HostBinding, OnInit} from '@angular/core';
+import {Component, HostBinding, OnInit, Inject} from '@angular/core';
 
-import {AppEventService, LayoutStateService} from './app.service';
 import {APP_LAYOUT_MODE} from './app.constant';
 
 @Component({
@@ -14,8 +13,8 @@ export class AppComponent implements OnInit{
   isWideMode = true;
 
   constructor(
-    private _appEvent: AppEventService,
-    private _layoutState: LayoutStateService
+    @Inject('appEvent') private _appEvent,
+    @Inject('layoutState') private _layoutState
   ) {
     this._appEvent.subscribe('app.layout', (layoutMode) => {
 
