@@ -10,7 +10,7 @@ import {FrameModule} from './frame/frame.module';
 import {PagesModule} from './pages/pages.module';
 import {AppComponent} from './app.component';
 import {routing} from './app.routing';
-import {AppEventService, LayoutStateService} from "./app.service";
+import {AppEventService, LayoutStateService} from './app.service';
 
 @NgModule({
   imports: [
