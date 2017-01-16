@@ -4,12 +4,12 @@ import {Subject} from 'rxjs/Subject';
 @Injectable()
 export class AppEventService {
 
-  private _data = new Subject<Object>();
-  private _dataStream$ = this._data.asObservable();
+  private _subject = new Subject<Object>();
+  private _subject$ = this._subject.asObservable();
   private _subscribeMap: Map<string, Array<Function>> = new Map<string, Array<Function>>();
 
   constructor() {
-    this._dataStream$.subscribe((data) => {this._onEvent(data)});
+    this._subject$.subscribe((data) => {this._onEvent(data)});
   }
 
   private _onEvent(data) {
@@ -25,17 +25,16 @@ export class AppEventService {
 
     subscribers.push(callback);
 
-    this._subscribeMap.set(event, subscribers);
-  }
+   }
 
   notifyDataChanged(event, value) {
-    let prevValue = this._data[event];
+    let prevValue = this._subject[event];
 
     if (prevValue !== value) {
-      this._data[event] = value;
-      this._data.next({
+      this._subject[event] = value;
+      this._subject.next({
         event: event,
-        data: this._data[event]
+        data: this._subject[event]
       });
     }
   }
